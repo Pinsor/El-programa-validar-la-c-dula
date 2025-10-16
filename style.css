@@ -1,0 +1,133 @@
+/* === Fondo general === */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #004aad, #00b4d8, #90e0ef);
+  background-size: 300% 300%;
+  animation: gradientFlow 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #222;
+}
+
+/* Animación de fondo */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Contenedor principal === */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* === Título === */
+h1 {
+  color: #004aad;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+  font-size: 0.95em;
+}
+
+/* === Campo de entrada === */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  margin: 20px 0;
+  border: 2px solid #cdd7f1;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: #f7faff;
+}
+
+input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 6px rgba(0, 119, 255, 0.4);
+  background-color: #ffffff;
+}
+
+/* === Botón principal === */
+button {
+  background: linear-gradient(90deg, #004aad, #0077ff);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 12px rgba(0, 74, 173, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #005ef5, #00b4d8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 74, 173, 0.5);
+}
+
+/* === Resultado === */
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.valida {
+  color: #0f5132;
+  background: #d1e7dd;
+  border: 1px solid #0f5132;
+  animation: fadeIn 0.4s ease;
+}
+
+.invalida {
+  color: #842029;
+  background: #f8d7da;
+  border: 1px solid #842029;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* === Footer === */
+footer {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #444;
+  opacity: 0.8;
+}
+
+footer:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
